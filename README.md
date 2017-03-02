@@ -1,30 +1,35 @@
-# renobet
+# English Markov Chain Word Generator
+Iterate through a dictionary and tally up the transitions
+between one letter and the next. There's special characters
+`^` to mark where words start, and `$` to mark where words
+end.
 
-What if English ridded itself of redundancy? Here we explore the ramifications of eliminating
-the letters `c`, `q` and `x` from the English alphabet completely. We replace them as follows
+Generate new words by choosing the starting symbol `^` and
+picking a random letter from the set of all letters that
+appear at the beginning of word. Use the letter to look up
+letters that appear after that letter, and repeat that over
+and over again until one letter leads to the final word-end
+symbol, `$`.
+
+
+# Results
+Loved the first word. Second word sucks. Third word is weird.
+Fourth isn't good. Fifth looks Spanish. Sixth is pretty much
+a real word, right? Seventh looks German. Eighth is probably
+a real thing. Ninth is underwhelming. Tenth is 
+
 
 ```
-c => k
-k => k
-q => k
-s => s
-xo => ho
-x => ks
+cajubantizichmical
+etrb
+mpoverelistangoprrat
+tessprsckymp
+verondes
+pined
+lehiersharufinted
+iceners
+smax
+wimphumphrivocous
 ```
 
-## Interesting Results
 
-Here are words that went through the most transformations. `quixotic` becomes `kuihotik`, and
-is a perfect word to describe efforts carrything this project any further.
-
-```
-exchequer => ekskhekuer 3
-exchequers => ekskhekuers 3
-exotoxic => ehotoksik 3
-quincunx => kuinkunks 3
-quincunxes => kuinkunkses 3
-quincunxial => kuinkunksial 3
-quixotic => kuihotik 3
-quixotical => kuihotikal 3
-quixotically => kuihotikally 3
-```
